@@ -5,6 +5,9 @@ const bot = new Telegraf(TOKEN);
 
 let badarr = ['рома говно', 'a'];
 
+bot.on('new_chat_members', (ctx)=>{
+    ctx.sendMessage('hi');
+});
 bot.start((ctx) => {
     ctx.reply('рома');
 });
@@ -17,8 +20,4 @@ bot.hears('Рома',(ctx) => {
 bot.hears(badarr, (ctx) => {
     ctx.sendMessage('Иди нафиг!!');
 });
-bot.on('new_chat_members', (ctx)=>{
-    ctx.sendMessage('hi')
-});
-
 bot.launch();
