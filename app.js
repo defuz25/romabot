@@ -17,7 +17,7 @@ bot.hears('Рома',(ctx) => {
 bot.hears(badarr, (ctx) => {
     ctx.sendMessage('Иди нафиг!!');
 });
-bot.on('chat_join_request', (ctx)=>{
+bot.on('left_chat_member', (ctx)=>{
     ctx.sendMessage('hi');
 });
 
